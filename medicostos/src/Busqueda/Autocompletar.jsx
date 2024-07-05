@@ -30,7 +30,6 @@ class Autocompletar extends Component {
 
   onClick = e => {
     this.setState({
-      activeSuggestion: 0,
       filteredSuggestions: [],
       showSuggestions: false,
       userInput: e.currentTarget.innerText
@@ -39,10 +38,9 @@ class Autocompletar extends Component {
 
   onKeyDown = e => {
     const { activeSuggestion, filteredSuggestions } = this.state;
-
-    if (e.keyCode === 13) {
+    /* 13 = enter, 38 = arriba, 40 = abajo */
+    if (e.keyCode === 13) { 
       this.setState({
-        activeSuggestion: 0,
         showSuggestions: false,
         userInput: filteredSuggestions[activeSuggestion]
       });
@@ -52,9 +50,8 @@ class Autocompletar extends Component {
       }
       this.setState({ activeSuggestion: activeSuggestion - 1 });
     }
-    // User pressed the down arrow, increment the index
     else if (e.keyCode === 40) {
-      if (activeSuggestion - 1 === filteredSuggestions.length) {
+      if (activeSuggestion + 1 === filteredSuggestions.length) {
         return;
       }
       this.setState({ activeSuggestion: activeSuggestion + 1 });
