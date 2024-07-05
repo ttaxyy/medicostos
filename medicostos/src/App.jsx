@@ -1,15 +1,16 @@
-import NavBar from "./NavBar/NavBar"
-import Portada from "./Portada/Portada"
-import Busqueda from "./Busqueda/Busqueda"
-import "./App.css"
+import NavBar from "./NavBar/NavBar";
+import Portada from "./Portada/Portada";
+import Busqueda from "./Busqueda/Busqueda";
+import "./App.css";
 
 function App() {
-
   return (
-    <><NavBar />
+    <>
+      <NavBar />
       <Portada />
-      <Busqueda /></>
-  )
+      <Busqueda />
+    </>
+  );
 }
 
-export default App
+export default App;
