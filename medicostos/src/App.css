@@ -1,0 +1,55 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+    --verde-oscuro: #2B5B5F;
+    --aqua: #A4FFE2;
+    --naranja: #FBA563;
+    --azul-oscuro: #26495A;
+}
+
+body {
+  font-family: Calibri, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white ;
+}
+
+.btn-empty {
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 815px) {
+  .display-pc {
+      display: none;
+  }
+
+  .display-mobile {
+      display: block;
+  }
+  
+  header a {
+      padding: 0 15px;
+  }
+  #portada {
+      flex-direction: column;
+  }
+
+  #imagenPortada {
+      display: none;
+  }
+
+  #lema {
+      font-size: 36px;
+      text-align: center;
+  }
+      
+  #lema > span {
+      font-size:24px;
+  }
+}
