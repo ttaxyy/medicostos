@@ -8,7 +8,6 @@ function Busqueda() {
   return (
     <section id="busqueda">
             <div id="busqueda-container">
-                
                 <Autocompletar suggestions={["Paracetamol", "Ibuprofeno", "Aspirina", "Amoxicilina", "Diclofenaco", "Ketoprofeno"]}/>
             </div>
     </section>
