@@ -1,21 +1,21 @@
 * {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 :root {
-    --verde-oscuro: #2B5B5F;
-    --aqua: #A4FFE2;
-    --naranja: #FBA563;
-    --azul-oscuro: #26495A;
+  --verde-oscuro: #2b5b5f;
+  --aqua: #a4ffe2;
+  --naranja: #fba563;
+  --azul-oscuro: #26495a;
 }
 
 body {
   font-family: Calibri, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: white ;
+  background-color: white;
 }
 
 .btn-empty {
@@ -26,30 +26,47 @@ body {
 
 @media screen and (max-width: 815px) {
   .display-pc {
-      display: none;
+    display: none;
   }
 
   .display-mobile {
-      display: block;
+    display: block;
   }
-  
+
   header a {
-      padding: 0 15px;
+    padding: 0 15px;
   }
   #portada {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   #imagenPortada {
-      display: none;
+    display: none;
   }
 
   #lema {
-      font-size: 36px;
-      text-align: center;
+    font-size: 36px;
+    text-align: center;
   }
-      
+
   #lema > span {
-      font-size:24px;
+    font-size: 24px;
   }
+}
+/* App.css */
+.app-container {
+  padding: 20px;
+}
+
+.search-container {
+  margin-bottom: 20px;
+}
+
+.search-container input {
+  margin-right: 10px;
+  padding: 5px;
+}
+
+.search-container button {
+  padding: 5px 10px;
 }
