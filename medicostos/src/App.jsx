@@ -5,6 +5,9 @@ import "./App.css";
 import { QueryClient, QueryClientProvider } from "react-query";
 import SearchBar from "./components/SearchBar";
 import ErrorBoundary from "./components/ErrorBoundary";
+import { Routes, Route } from "react-router-dom";
+import Contacto from "./Contacto/Contacto";
+import Mapa from "./Mapa/Mapa";
 
 const queryClient = new QueryClient();
 
@@ -12,9 +15,10 @@ function App() {
   return (
     <>
       <NavBar />
-      <Portada />
-      <Busqueda />
-
+      <Routes>
+        <Route path="/" element={<Portada />}></Route>
+        <Route path="/contactanos" element={<Contacto />}></Route>
+      </Routes>
       <QueryClientProvider client={queryClient}>
         <ErrorBoundary>
           <div className="App">
