@@ -41,7 +41,6 @@ function NavBar() {
           <img src={logo} alt="logo" className="icon-pc" />
           <Link to="/" style={{ textDecoration: "none" }}>
             Medicostos
-            {menu === "inicio" ? <hr /> : <></>}
           </Link>
         </a>
       </div>
@@ -52,21 +51,14 @@ function NavBar() {
       </div>
       <nav className="display-pc">
         <a onClick={() => setMenu("inicio")}>
-          <Link to="/">
-            Inicio
-            {menu === "inicio" ? <hr /> : <></>}
-          </Link>
+          <Link to="/">Inicio</Link>
         </a>
         <a onClick={() => setMenu("consejos")}>
-          <Link to="/consejos">
-            Consejos
-            {menu === "consejos" ? <hr /> : <></>}
-          </Link>
+          <Link to="/consejos">Consejos</Link>
         </a>
         <a onClick={() => setMenu("contactanos")}>
           <Link to="/contactanos" style={{ textDecoration: "none" }}>
             Contactanos
-            {menu === "contactanos" ? <hr /> : <></>}
           </Link>
         </a>
       </nav>
