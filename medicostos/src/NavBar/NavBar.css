@@ -36,11 +36,9 @@ header a:hover {
 .icon-pc {
   width: 3rem;
   vertical-align: top;
+  margin-bottom: 1rem;
 }
 
 .display-pc {
   display: flex;
-}
-hr {
-  visibility: hidden;
 }
