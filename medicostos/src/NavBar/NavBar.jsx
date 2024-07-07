@@ -1,74 +1,60 @@
 import React, { useState } from "react";
 import "./NavBar.css";
 import logo from "../assets/logo.svg";
+import menu_icon from "../assets/menu.svg";
 import { Link } from "react-router-dom";
 
-// function NavBar() {
-//   return (
-//     <header>
-//       <div className="display-pc texto-logo">
-//         <a href="#">
-//           <img src={logo} alt="logo" className="icon-pc" />
-//           Medicostos
-//         </a>
-//       </div>
-//       <div className="display-mobile">
-//         <a href="index.html">
-//           <img src={logo} alt="logo" className="icon-mobile" />
-//         </a>
-//       </div>
-//       <nav className="display-pc">
-//         <a href="#">Inicio</a>
-//         <a href="#">Consejos</a>
-//         <a href="#">Contáctanos</a>
-//       </nav>
-//       <div className="display-mobile">
-//         <button onclick="abrir_nav()" className="btn-empty">
-//           <img src="../assets/menu" className="icon-mobile" />
-//         </button>
-//       </div>
-//     </header>
-//   );
-// }
-
 function NavBar() {
-  const [menu, setMenu] = useState("inicio");
+  const navRef = React.useRef();
+  const abrirNav = () => {
+    navRef.current.style.display = 'flex'
+  };
+  const cerrarNav = () => {
+    navRef.current.style.display = 'none'
+  };
 
-  return (
+  return (<>
+    <div id="navegador" ref={navRef} >
+        <button onClick={cerrarNav} id="btnCerrar">Cerrar</button>
+        <Link to="/" className="linksNav" onClick={cerrarNav}>Inicio</Link>
+        <Link to="/consejos" className="linksNav" onClick={cerrarNav}>Consejos</Link>
+        <Link to="/contactanos" className="linksNav" onClick={cerrarNav}>Contáctanos</Link>
+    </div>
     <header>
       <div className="display-pc texto-logo">
         <a onClick={() => setMenu("inicio")}>
           <img src={logo} alt="logo" className="icon-pc" />
-          <Link to="/" style={{ textDecoration: "none" }}>
+          <Link to="/">
             Medicostos
           </Link>
         </a>
       </div>
       <div className="display-mobile">
-        <a href="index.html">
+        <Link to="/">
           <img src={logo} alt="logo" className="icon-mobile" />
-        </a>
+        </Link>
       </div>
       <nav className="display-pc">
-        <a onClick={() => setMenu("inicio")}>
           <Link to="/">Inicio</Link>
-        </a>
-        <a onClick={() => setMenu("consejos")}>
           <Link to="/consejos">Consejos</Link>
-        </a>
-        <a onClick={() => setMenu("contactanos")}>
-          <Link to="/contactanos" style={{ textDecoration: "none" }}>
-            Contactanos
-          </Link>
-        </a>
+          <Link to="/contactanos">Contactanos</Link>
       </nav>
       <div className="display-mobile">
-        <button onclick="abrir_nav()" className="btn-empty">
-          <img src="../assets/menu" className="icon-mobile" />
+        <button onClick={abrirNav} className="btn-empty">
+          <img src={menu_icon} className="icon-mobile" />
         </button>
       </div>
     </header>
+    </>
   );
 }
+
+/* function abrir_nav() {
+  document.getElementById(navegador).style.display = "flex";
+}
+
+function cerrar_nav() {
+  document.getElementById({navegador}).style.display = "none";
+} */
 
 export default NavBar;
