@@ -22,12 +22,10 @@ function NavBar() {
     </div>
     <header>
       <div className="display-pc texto-logo">
-        <a onClick={() => setMenu("inicio")}>
-          <img src={logo} alt="logo" className="icon-pc" />
           <Link to="/">
+            <img src={logo} alt="logo" className="icon-pc" />
             Medicostos
           </Link>
-        </a>
       </div>
       <div className="display-mobile">
         <Link to="/">
@@ -37,7 +35,7 @@ function NavBar() {
       <nav className="display-pc">
           <Link to="/">Inicio</Link>
           <Link to="/consejos">Consejos</Link>
-          <Link to="/contactanos">Contactanos</Link>
+          <Link to="/contactanos">Contáctanos</Link>
       </nav>
       <div className="display-mobile">
         <button onClick={abrirNav} className="btn-empty">

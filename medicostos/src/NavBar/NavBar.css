@@ -24,8 +24,10 @@ header a:hover {
 }
 
 .texto-logo {
+  display: flex;
   font-size: 25px;
-  margin-top: 1rem;
+  height: 50px;
+  align-items: center;
 }
 
 .icon-mobile {
@@ -34,9 +36,9 @@ header a:hover {
 }
 
 .icon-pc {
-  width: 3rem;
-  vertical-align: top;
-  margin-bottom: 1rem;
+  width: 2rem;
+  vertical-align: bottom;
+  margin-right:6px;
 }
 
 .display-pc {
