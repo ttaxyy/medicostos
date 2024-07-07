@@ -1,37 +1,46 @@
 .display-mobile {
-    display: none;
+  display: none;
 }
 
 header {
-    display: flex;
-    background-color: var(--verde-oscuro);
-    height: 75px;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 18px;
+  display: flex;
+  background-color: var(--verde-oscuro);
+  height: 75px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
 }
 
 header a {
-    padding: 0 20px;
-    text-decoration: none;
-    color: white;
+  padding: 0 20px;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
 }
 
 header a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .texto-logo {
-    font-size: 25px;
+  font-size: 25px;
+  margin-top: 1rem;
 }
 
 .icon-mobile {
-    margin: 7px 10px;
-    width: 30px;
+  margin: 7px 10px;
+  width: 30px;
 }
 
 .icon-pc {
-    width: 24px;
-    vertical-align:top;
+  width: 3rem;
+  vertical-align: top;
+}
+
+.display-pc {
+  display: flex;
+}
+hr {
+  visibility: hidden;
 }
