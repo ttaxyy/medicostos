@@ -13,7 +13,6 @@ function App() {
         <Route path="/" element={<Portada />}></Route>
         <Route path="/contactanos" element={<Contacto />}></Route>
       </Routes>
-      asd
     </>
   );
 }
