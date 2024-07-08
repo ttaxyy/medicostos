@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Portada.css";
 import farmacia from "../assets/farmacia.jpg";
 import { QueryClient, QueryClientProvider } from "react-query";
@@ -9,6 +9,15 @@ const queryClient = new QueryClient();
 
 function Portada() {
   const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    if (isScrolled) {
+      window.scrollTo({
+        top: window.innerHeight,
+        behavior: "smooth",
+      });
+    }
+  }, [isScrolled]);
 
   return (
     <>
@@ -25,6 +34,7 @@ function Portada() {
           </div>
         </div>
       </div>
+
       <QueryClientProvider client={queryClient}>
         <ErrorBoundary>
           <div
@@ -34,6 +44,7 @@ function Portada() {
           </div>
         </ErrorBoundary>
       </QueryClientProvider>
+      <div className={`bloque ${isScrolled ? "active" : ""}`}></div>
     </>
   );
 }

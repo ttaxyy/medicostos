@@ -23,11 +23,12 @@ const MedicationsList = ({ query }) => {
           />
         ))}
       </div>
+      {/* 
       <div className="medications-info">
         {medications.map((medication, index) => (
           <InfoCard key={medication.id} medication={medication} index={index} />
         ))}
-      </div>
+      </div> */}
     </>
   );
 };

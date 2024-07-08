@@ -15,7 +15,7 @@ const SearchBar = ({ setIsScrolled }) => {
   };
 
   return (
-    <section id="busqueda">
+    <section className="busqueda">
       <div>
         <input
           type="text"

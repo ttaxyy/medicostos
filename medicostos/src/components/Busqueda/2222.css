@@ -1,20 +1,17 @@
-#busqueda {
-  top: 80vh; /* Ajusta la posición superior según tus necesidades */
+.busqueda {
+  /* Ajusta la posición superior según tus necesidades */
   left: 0;
   width: 100%; /* Asegúrate de que la barra ocupe todo el ancho de la ventana */
   justify-content: center;
-  z-index: 1000; /* Asegúrate de que la barra esté por encima de otros elementos */
-  transition: top 2s; /* Cambié margin-top a top */
-}
-
-#busqueda-container {
+  z-index: 1; /* Asegúrate de que la barra esté por encima de otros elementos */
   display: flex;
-  align-items: center;
-  flex-direction: column;
-  background-color: black;
+  position: absolute;
+  top: 80vh; /* Justo debajo del navbar */
+  width: 100%;
+  transition: top 0.4s ease;
 }
 
-#busqueda input {
+.busqueda input {
   width: 60vw;
   height: 60px;
   font-size: 16px;
@@ -23,7 +20,7 @@
   background-color: #eee;
 }
 
-#busqueda input:focus {
+.busqueda input:focus {
   outline: none;
 }
 */ .no-suggestions {
