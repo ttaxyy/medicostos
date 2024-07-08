@@ -16,7 +16,6 @@ function App() {
     <>
       <NavBar />
       <div className="App"></div>
-
       <Routes>
         <Route path="/" element={<Portada />}></Route>
         <Route path="/consejos" element={<CardGrid />}></Route>
