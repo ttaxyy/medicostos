@@ -48,7 +48,16 @@ body {
   left: 0;
   width: 100%;
   justify-content: center;
-  transition: top 0.5s ease-in-out;
+  transition: top 2s ease-in-out;
+}
+
+.search-results-container.active {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center; /* Centra el contenido */
+  align-items: flex-start; /* Alinea al inicio del contenedor */
+  position: relative;
+  top: -70vh; /* Puedes ajustar esta propiedad si es necesario */
 }
 
 #busqueda active {
