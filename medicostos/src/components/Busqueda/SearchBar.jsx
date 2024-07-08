@@ -1,11 +1,18 @@
-import React from "react";
-import { useState } from "react";
-import "./Busqueda.css";
-import Autocompletar from "./Autocompletar";
+import React, { useState } from "react";
+import "./2222.css";
 import MedicationsList from "../MedicationsList";
 
-const SearchBar = () => {
+const SearchBar = ({ setIsScrolled }) => {
   const [query, setQuery] = useState("");
+
+  const handleChange = (e) => {
+    setQuery(e.target.value);
+    if (e.target.value.length > 0) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  };
 
   return (
     <section id="busqueda">
@@ -13,21 +20,13 @@ const SearchBar = () => {
         <input
           type="text"
           value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search for medications..."
+          onChange={handleChange}
+          placeholder="Buscar Medicamento..."
         />
         <MedicationsList query={query} />
       </div>
     </section>
   );
 };
-
-function scrollBusqueda() {
-  if (document.documentElement.scrollTop > 150) {
-    document.getElementById("busqueda").style.marginTop = "400px";
-  } else {
-    document.getElementById("busqueda").style.marginTop = "20px";
-  }
-}
 
 export default SearchBar;

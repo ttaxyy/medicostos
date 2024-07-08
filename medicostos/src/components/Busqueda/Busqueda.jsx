@@ -23,17 +23,17 @@ function Busqueda() {
     </section>
   );
 }
-
+/*
 window.onscroll = function () {
   scrollBusqueda();
 };
 
-function scrollBusqueda() {
+ function scrollBusqueda() {
   if (document.documentElement.scrollTop > 150) {
     document.getElementById("busqueda").style.marginTop = "400px";
   } else {
     document.getElementById("busqueda").style.marginTop = "20px";
   }
-}
+} */
 
 export default Busqueda;

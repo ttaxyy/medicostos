@@ -1,4 +1,4 @@
-import NavBar from "./NavBar/NavBar";
+import NavBar from "./components/NavBar/NavBar";
 import Portada from "./Portada/Portada";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
