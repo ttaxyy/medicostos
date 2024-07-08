@@ -9,11 +9,11 @@ function App() {
   return (
     <>
       <NavBar />
-
       <Routes>
         <Route path="/" element={<Portada />}></Route>
         <Route path="/contactanos" element={<Contacto />}></Route>
       </Routes>
+      asd
     </>
   );
 }
