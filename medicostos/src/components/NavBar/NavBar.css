@@ -38,7 +38,7 @@ header a:hover {
 .icon-pc {
   width: 2rem;
   vertical-align: bottom;
-  margin-right:6px;
+  margin-right: 6px;
 }
 
 .display-pc {
@@ -49,41 +49,48 @@ header a:hover {
   display: none;
   flex-direction: column;
   align-items: flex-end;
-  height:100%;
-  width:200px;
-  background-color:white;
-  position:fixed!important;
-  z-index:1;
-  overflow:auto;
-  right:0;
-  border-left:1px solid #ccc;
-  position:relative;
-  animation:saleDerecha 0.4s;
+  height: 100%;
+  width: 200px;
+  background-color: white;
+  position: fixed !important;
+  z-index: 1;
+  overflow: auto;
+  right: 0;
+  border-left: 1px solid #ccc;
+  position: relative;
+  animation: saleDerecha 0.4s;
 }
 
 @keyframes saleDerecha {
-  from{right:-300px;opacity:0} to{right:0;opacity:1}
+  from {
+    right: -300px;
+    opacity: 0;
+  }
+  to {
+    right: 0;
+    opacity: 1;
+  }
 }
 
 #btnCerrar {
-  width:100%;
-  padding:8px 16px;
-  text-align:right;
-  border:none;
-  font-size:18px;
-  cursor:pointer;
+  width: 100%;
+  padding: 8px 16px;
+  text-align: right;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
 }
 
 .linksNav {
-  display:flex;
-  justify-content:end;
-  gap:15px;
-  width:100%;
-  white-space:nowrap;
-  text-align:right;
-  padding:8px;
-  text-decoration:none;
-  color:inherit;
-  background-color:inherit;
-  cursor:pointer;
+  display: flex;
+  justify-content: end;
+  gap: 15px;
+  width: 100%;
+  white-space: nowrap;
+  text-align: right;
+  padding: 8px;
+  text-decoration: none;
+  color: inherit;
+  background-color: inherit;
+  cursor: pointer;
 }
