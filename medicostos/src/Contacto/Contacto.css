@@ -40,7 +40,7 @@
 .mensajito > h2 {
   display: flex;
   justify-content: center;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 .mensajito > p {
   display: flex;
@@ -58,13 +58,13 @@ input {
   flex-direction: column;
   padding: 0 1rem 1rem 1rem;
 }
-
-.enviar {
-  padding-top: 25%;
+#mensaje {
+  height: 6rem;
 }
 
-.ayNoSe {
+.enviar {
   display: flex;
+  justify-content: center;
 }
 
 input,
@@ -83,7 +83,6 @@ textarea {
 .enviar button {
   height: 2rem;
   width: 4rem;
-
   font-size: 1rem;
   color: white;
   background-color: #000;
@@ -106,11 +105,9 @@ textarea {
 
   .inputs {
     width: 100%;
+    padding: 0;
   }
 
-  .contenidoFormulario {
-    width: 5000px;
-  }
   .todo {
     padding: 0;
   }
@@ -119,6 +116,17 @@ textarea {
   }
   .enviar {
     padding-top: 0;
-    padding-left: 10vh;
+    display: flex;
+    align-items: center;
+  }
+  .nombreApellido {
+    display: flex;
+    flex-direction: column;
+  }
+  .contenidoFormulario {
+    width: 100vh;
+    padding: 0;
+    margin: 0;
+    gap: 0;
   }
 }
