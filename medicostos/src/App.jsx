@@ -8,6 +8,8 @@ import { Routes, Route } from "react-router-dom";
 import Contacto from "./Contacto/Contacto";
 
 import InfoCard from "./components/Card/InfoCard";
+import Mapa from "./Mapa/Mapa";
+import InfoCard from "./components/Card/InfoCard";
 
 function App() {
   return (
