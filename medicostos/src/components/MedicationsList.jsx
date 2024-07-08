@@ -2,6 +2,7 @@ import React from "react";
 import { useSearchMedications } from "../hooks/useSearchMedications";
 import MedicationCard from "./Card/MedicationCard";
 import LoadingSpinner from "./configs/LoadingSpinner";
+import InfoCard from "./Card/InfoCard";
 
 const MedicationsList = ({ query }) => {
   const { data, error, isLoading } = useSearchMedications(query);
@@ -12,15 +13,22 @@ const MedicationsList = ({ query }) => {
   const medications = data || [];
 
   return (
-    <div className="medications-list">
-      {medications.map((medication, index) => (
-        <MedicationCard
-          key={medication.id}
-          medication={medication}
-          index={index}
-        />
-      ))}
-    </div>
+    <>
+      <div className="medications-list">
+        {medications.map((medication, index) => (
+          <MedicationCard
+            key={medication.id}
+            medication={medication}
+            index={index}
+          />
+        ))}
+      </div>
+      <div className="medications-info">
+        {medications.map((medication, index) => (
+          <InfoCard key={medication.id} medication={medication} index={index} />
+        ))}
+      </div>
+    </>
   );
 };
 
