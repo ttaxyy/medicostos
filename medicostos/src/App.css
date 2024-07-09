@@ -158,29 +158,20 @@ body {
   z-index: 1;
   display: block;
   height: 0vh;
-  width: 40%;
+  width: 50%;
   transition: width 0.3s ease;
-}
-
-.medications-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: width 0.8s ease;
-  width: 100vw;
-  margin-top: -1rem; /* esto esta re trucho cambialo despues */
-  border: 2px solid blue;
 }
 
 .medications-info {
   display: none;
   transition: width 3.2s ease;
+  height: 100%;
 }
 
 .app-container.selected .medications-info {
   z-index: 1;
   display: block;
-  height: 0vh;
+  height: 80vh;
   width: 50%; /* Ajustado a 50% para un balance mejorado */
   transition: width 3.2s ease; /* Aumentado el tiempo de transición */
 }
@@ -190,4 +181,3 @@ body {
     width: 100vw;
   }
 }
-
