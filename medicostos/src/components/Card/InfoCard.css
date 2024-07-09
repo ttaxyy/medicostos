@@ -16,8 +16,8 @@
   z-index: 100;
   display: flex;
   direction: rtl;
-
   border: 2px solid red;
+  justify-content: center;
 }
 
 .b {
