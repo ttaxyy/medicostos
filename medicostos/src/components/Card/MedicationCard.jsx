@@ -12,9 +12,11 @@ const MedicationCard = ({ medication, index, onClick }) => {
         alt={medication.nombre}
         className="imgcard"
       />
-      <h2>{medication.nombre}</h2>
-      <p>{medication.complemento}</p>
-      <p>Precio: ${medication.precio}</p>
+      <div className="card-content">
+        <h2>{medication.nombre}</h2>
+        <p>{medication.complemento}</p>
+        <p className="precio">Precio: ${medication.precio}</p>
+      </div>
     </div>
   );
 };
