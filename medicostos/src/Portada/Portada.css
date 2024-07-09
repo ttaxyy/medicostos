@@ -55,7 +55,7 @@ body {
 }
 
 .search-results-container {
-  background-color: rgba(0, 0, 255, 0.445);
+  background-color: rgb(214, 214, 214);
   height: 0vh;
 }
 

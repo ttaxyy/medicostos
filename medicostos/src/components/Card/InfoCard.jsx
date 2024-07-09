@@ -46,8 +46,8 @@ const InfoCard = ({ medication }) => {
           src={medication.urlImagen}
           alt={medication.nombre}
         />
-        <p>{medication.nombre}</p>
-        <p>Precio: ${medication.precio}</p>
+        <h5>{medication.nombre}</h5>
+        <h1>Precio: ${medication.precio}</h1>
 
         <button className="botonMap" onClick={linkClick}>
           Ir a página web

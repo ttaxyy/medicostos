@@ -7,8 +7,9 @@
   margin: 20px;
   padding: 40px;
   width: 90%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; /* Añadir transición suave */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  transition: transform 0.3s ease; /* Añadir transición suave */
 }
 
 .imgcard {
@@ -26,7 +27,17 @@
 .card-content h2 {
   margin: 0;
   font-size: 1.5em; /* Ajusta el tamaño si es necesario */
-  color: #0a0a0a;
+  color: #ffffff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space:nowrap;
+  width: 80%;
+}
+
+.card-content h3 {
+  margin: 0;
+  font-size: 1.2em;
+  color: #ffffff; /* Ajusta el color si es necesario */
   overflow: hidden;
   text-overflow: ellipsis;
   white-space:nowrap;
@@ -37,7 +48,7 @@
   margin: 5px 0;
   font-size: 1.3em;
   font-weight: bold; /* Tamaño del texto */
-  color: #000000; /* Color del texto */
+  color: #ffffff; /* Color del texto */
 }
 
 .precio {

@@ -8,7 +8,7 @@
   display: flex;
   position: absolute;
   top: 80vh; /* Justo debajo del navbar */
-  transition: top 0.4s ease;
+  transition: top 1s ease;
 }
 
 .busqueda input {
