@@ -25,7 +25,7 @@ const SearchBar = ({ setIsScrolled }) => {
         />
       </div>
       <div className="med-list">
-        <MedicationsList query={query} />
+        {query && <MedicationsList query={query} />}{" "}
       </div>
     </section>
   );

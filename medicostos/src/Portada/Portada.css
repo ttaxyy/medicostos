@@ -31,12 +31,13 @@ body {
 }
 
 #imagenPortada {
-  width: 50vw;
+  width: 50%;
   height: 100%;
   object-fit: cover;
 }
 
 #lema {
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
