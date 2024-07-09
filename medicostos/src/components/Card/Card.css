@@ -1,6 +1,6 @@
 .card {
   display: flex;
-  align-items: start;
+  align-items: center;
   background-color: #ffffff; /* Color de fondo */
   border-radius: 10px;
   box-shadow: 0px 10px 8px rgba(134, 64, 64, 0.1);
@@ -9,19 +9,13 @@
   width: 90%;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; /* Añadir transición suave */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-/* aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa */
-.imgcard {
-  width: 80px;
-  height: 80px;
-  margin-right: 20px;
-  border-radius: 8px;
+  cursor: pointer;
 }
 
-@media (min-width: 768px) {
-  .imgcard {
-    height: 80px;
-  }
+.imgcard {
+  max-width: 80px;
+  height: auto;
+  margin-right: 20px;
 }
 
 .card-content {
@@ -34,19 +28,26 @@
   margin: 0;
   font-size: 1.5em; /* Ajusta el tamaño si es necesario */
   color: #ffffff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space:nowrap;
+  width: 80%;
 }
 
 .card-content h3 {
   margin: 0;
   font-size: 1.2em;
   color: #ffffff; /* Ajusta el color si es necesario */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space:nowrap;
+  width: 80%;
 }
 
 .card-content p {
   margin: 5px 0;
   font-size: 1.3em;
   font-weight: bold; /* Tamaño del texto */
-
   color: #ffffff; /* Color del texto */
 }
 
@@ -59,4 +60,27 @@
 .card:hover {
   transform: translateY(-10px);
   /* Mueve la tarjeta hacia arriba cuando se pasa el cursor sobre ella */
+}
+
+@media (max-width: 800px) {
+  .card {
+    padding: 1rem;
+  }
+
+  .imgcard {
+    width: 15vw;
+  }
+
+  .card-content {
+    width: 60vw;
+  }
+
+  .card-content h2 {
+    font-size: 1.2em; /* Ajusta el tamaño si es necesario */
+    width: 100%;
+  }
+
+  .card-content p {
+    font-size: 1em;
+  }
 }
