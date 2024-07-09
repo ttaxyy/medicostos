@@ -35,10 +35,11 @@
 
 .mensajito {
   display: flex;
+  justify-content: center;
   color: white;
   flex-direction: column;
   gap: 5vh;
-  margin-top: 20vh;
+  margin-top: 0vh;
 }
 
 .mensajito > h2 {
@@ -49,6 +50,8 @@
 .mensajito > p {
   display: flex;
   margin: 0vh 5vh;
+  gap: 2rem;
+  flex-direction: column;
 }
 
 input {
