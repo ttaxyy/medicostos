@@ -1,3 +1,11 @@
+/* Portada.css */
+
+/* Portada.css */
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -7,9 +15,13 @@ body {
 }
 
 .front {
+  position: relative;
   height: calc(100vh - 75px); /* Ajuste por el navbar */
   overflow: hidden;
-  transition: transform 0.5s ease-in-out;
+}
+
+.front.scrolled {
+  /* Agrega cualquier estilo adicional para cuando se haya desplazado */
 }
 
 #portada {
@@ -41,36 +53,29 @@ body {
   font-size: 30px;
 }
 
-#busqueda {
+.bloque {
+  height: 0vh;
+}
+
+.bloque.active {
+  height: 100vh;
+}
+
+.search-results-container {
+  background-color: blue;
   display: flex;
-  position: absolute;
-  top: 75px; /* Justo debajo del navbar */
-  left: 0;
-  width: 100%;
-  justify-content: center;
-  transition: top 2s ease-in-out;
+  height: 0vh;
+  justify-content: center; /* Centra el contenido */
+  align-items: flex-start; /* Alinea al inicio del contenedor */
 }
 
 .search-results-container.active {
-  display: flex;
-  min-height: 100vh;
-  justify-content: center; /* Centra el contenido */
-  align-items: flex-start; /* Alinea al inicio del contenedor */
-  position: relative;
-  top: -70vh; /* Puedes ajustar esta propiedad si es necesario */
+  display: block; /* Muestra el contenedor cuando se activa */
 }
 
-#busqueda active {
-  top: 50vh;
-}
-
-.search-results-container active {
-  display: flex;
-  min-height: 100vh;
-}
-
-.front.scrolled ~ #busqueda {
-  top: 20vh; /* Mueve la barra de búsqueda hacia arriba */
+.search-results-container.active .busqueda {
+  height: calc(100vh - 75px);
+  top: 110vh; /* Ajusta esta propiedad para el desplazamiento cuando isScrolled es true */
 }
 
 #busqueda-container {
@@ -79,7 +84,7 @@ body {
   flex-direction: column;
 }
 
-#busqueda input {
+.busqueda input {
   display: block;
   position: static;
   top: auto;
@@ -89,7 +94,7 @@ body {
   transition: none;
 }
 
-#busqueda input:focus {
+.busqueda input:focus {
   outline: none;
 }
 
