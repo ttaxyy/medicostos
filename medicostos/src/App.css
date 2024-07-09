@@ -13,12 +13,6 @@ body {
   background-color: white;
 }
 
-.medications-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .btn-empty {
   border: none;
   background-color: inherit;
@@ -159,14 +153,18 @@ body {
 }
 
 .app-container.selected .medications-info {
-  width: 50%;
+  z-index: 1;
+  display: block;
+  height: 0vh;
+  width: 40%;
+  transition: width 0.3s ease;
 }
 
 .medications-list {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   transition: transform 0.3s ease;
   margin-top: -1rem; /* esto esta re trucho cambialo despues */
   border: 2px solid blue;
@@ -177,10 +175,8 @@ body {
   transition: width 0.3s ease;
 }
 
-.app-container.selected .medications-info {
-  z-index: 1;
-  display: block;
-  height: 0vh;
-  width: 40%;
-  transition: width 0.3s ease;
+@media (max-width: 800px) {
+  .app-container.selected .medications-list {
+    width: 100vw;
+  }
 }
