@@ -15,14 +15,16 @@ const SearchBar = ({ setIsScrolled }) => {
   };
 
   return (
-    <section className="busqueda">
-      <div>
+    <section>
+      <div className="busqueda">
         <input
           type="text"
           value={query}
           onChange={handleChange}
           placeholder="Buscar Medicamento..."
         />
+      </div>
+      <div className="med-list">
         <MedicationsList query={query} />
       </div>
     </section>

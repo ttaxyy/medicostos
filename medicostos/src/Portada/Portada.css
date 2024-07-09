@@ -53,58 +53,24 @@ body {
   font-size: 30px;
 }
 
-.bloque {
-  height: 0vh;
-}
-
-.bloque.active {
-  height: 100vh;
-}
-
 .search-results-container {
-  background-color: blue;
-  display: flex;
+  background-color: rgba(0, 0, 255, 0.445);
   height: 0vh;
-  justify-content: center; /* Centra el contenido */
-  align-items: flex-start; /* Alinea al inicio del contenedor */
 }
 
 .search-results-container.active {
   display: block; /* Muestra el contenedor cuando se activa */
+  height: 100vh;
 }
 
 .search-results-container.active .busqueda {
   height: calc(100vh - 75px);
-  top: 110vh; /* Ajusta esta propiedad para el desplazamiento cuando isScrolled es true */
-}
-
-#busqueda-container {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-.busqueda input {
-  display: block;
-  position: static;
-  top: auto;
-  left: auto;
-  width: auto;
-  justify-content: flex-start;
-  transition: none;
-}
-
-.busqueda input:focus {
-  outline: none;
-}
-
-#resultados {
-  width: 100%;
-  padding-top: 20px;
+  top: 105vh; /* Ajusta esta propiedad para el desplazamiento cuando isScrolled es true */
 }
 
 .medications-list {
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 1;
 }

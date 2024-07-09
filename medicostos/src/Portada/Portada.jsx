@@ -40,7 +40,10 @@ function Portada() {
           <div
             className={`search-results-container ${isScrolled ? "active" : ""}`}
           >
-            <SearchBar setIsScrolled={setIsScrolled} />
+            <SearchBar
+              className={`bloque ${isScrolled ? "active" : ""}`}
+              setIsScrolled={setIsScrolled}
+            />
           </div>
         </ErrorBoundary>
       </QueryClientProvider>
