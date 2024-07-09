@@ -1,4 +1,14 @@
 /* ESTE EL EL ORIGINAL */
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 
 * {
   padding: 0;
@@ -175,6 +185,7 @@ body {
 .medications-info {
   display: none;
   transition: width 3.2s ease;
+  animation: show 0.5s ease-in-out;
 }
 
 .app-container.selected .medications-info {
@@ -190,4 +201,3 @@ body {
     width: 100vw;
   }
 }
-
