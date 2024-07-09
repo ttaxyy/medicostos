@@ -1,3 +1,14 @@
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 .card {
   display: flex;
   align-items: center;
@@ -6,10 +17,11 @@
   box-shadow: 0px 10px 8px rgba(134, 64, 64, 0.1);
   margin: 20px;
   padding: 40px;
-  width: 90%;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; /* Añadir transición suave */
+  width: 80%; /* Ajusta el ancho */
+  transition: transform 0.3s ease, box-shadow 0.8s ease, border-color 0.3s ease; /* Añadir transición suave */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  animation: show 0.5s;
 }
 
 .imgcard {
@@ -30,7 +42,7 @@
   color: #ffffff;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space:nowrap;
+  white-space: nowrap;
   width: 80%;
 }
 
@@ -40,7 +52,7 @@
   color: #ffffff; /* Ajusta el color si es necesario */
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space:nowrap;
+  white-space: nowrap;
   width: 80%;
 }
 
