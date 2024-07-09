@@ -8,14 +8,17 @@ import drSimi from "../../assets/farmaciasDrSimi.png";
 import bokita from "../../assets/farmaciasLaBokita.png";
 
 const InfoCard = ({ medication }) => {
+  // Función para manejar el clic en el botón, abriendo el enlace en una nueva pestaña
   const linkClick = () => {
-    window.location.href = medication.urlMedicamento;
+    window.open(medication.urlMedicamento, "_blank"); // Abre la URL en una nueva pestaña
   };
 
-  const mapClic = () => {
-    window.location.href = medication.farmaciaDireccion;
+  // Función para manejar el clic en la imagen del mapa, abriendo el enlace en una nueva pestaña
+  const mapClick = () => {
+    window.open(medication.farmaciaDireccion, "_blank"); // Abre la URL de la dirección en una nueva pestaña
   };
 
+  // Función para obtener la imagen de la farmacia según el nombre
   const getFarmaciaImage = (farmaciaNombre) => {
     switch (farmaciaNombre) {
       case "Salcobrand":
@@ -43,7 +46,7 @@ const InfoCard = ({ medication }) => {
           src={medication.urlImagen}
           alt={medication.nombre}
         />
-        <p> {medication.nombre}</p>
+        <p>{medication.nombre}</p>
         <p>Precio: ${medication.precio}</p>
 
         <button className="botonMap" onClick={linkClick}>
@@ -52,7 +55,7 @@ const InfoCard = ({ medication }) => {
         <img
           className="map"
           src={getFarmaciaImage(medication.farmaciaNombre)}
-          onClick={mapClic}
+          onClick={mapClick} // Cambié mapClic a mapClick para consistencia
         />
       </div>
     </div>
