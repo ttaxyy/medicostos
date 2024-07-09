@@ -130,3 +130,16 @@ textarea {
     gap: 0;
   }
 }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  width: 100%;
+}
+.confirmacion > h2 {
+  display: flex;
+  padding: 1rem;
+  font-size: 100%;
+  justify-content: center;
+}
