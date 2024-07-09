@@ -56,7 +56,7 @@ body {
 }
 /* App.css */
 .app-container {
-  padding: 20px;
+  padding: 0px;
 }
 
 .search-container {
@@ -143,11 +143,6 @@ body {
   }
 }
 
-.app-container {
-  display: flex;
-  transition: transform 0.3s ease;
-}
-
 /* AQUI TERMINA EL ORIGINAL */
 
 .app-container {
@@ -155,8 +150,11 @@ body {
   transition: transform 0.3s ease;
 }
 
+.app-container.selected {
+  display: flex;
+}
+
 .app-container.selected .medications-list {
-  transform: translateX(-50%);
   width: 50%;
 }
 
@@ -180,8 +178,9 @@ body {
 }
 
 .app-container.selected .medications-info {
+  z-index: 1;
   display: block;
-
+  height: 0vh;
   width: 40%;
   transition: width 0.3s ease;
 }
