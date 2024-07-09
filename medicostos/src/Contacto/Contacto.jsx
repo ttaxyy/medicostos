@@ -21,12 +21,20 @@ function Contacto() {
     });
   };
 
+  const [confirmada, setConfirmada] = useState(false); // para que inicie en falso el mensaje de confirmada
+
+  const confirmacionClic = () => {
+    /* cambia la confirmada a true */
+    setConfirmada(true);
+  };
+
   // Función para manejar el envío del formulario.
   // Se ejecuta cuando el usuario envía el formulario.
   const handleSubmit = (e) => {
     e.preventDefault(); // Previene el comportamiento por defecto del formulario (recargar la página).
     console.log("Form data submitted:", formData); // Imprime los datos del formulario en la consola.
-    alert("consulta enviada, gracias por su aporte"); // Muestra una alerta indicando que el formulario fue enviado.
+    // alert("consulta enviada, gracias por su aporte"); // Muestra una alerta indicando que el formulario fue enviado.
+    confirmacionClic(); // va aqui el clic, por que? ni perra
   };
 
   return (
@@ -92,6 +100,11 @@ function Contacto() {
                 </div>
               </div>
             </form>
+            {confirmada && (
+              <div className="confirmacion">
+                <h2>Consulta enviada, gracias por su aporte</h2>
+              </div>
+            )}
           </div>
         </div>
       </div>
