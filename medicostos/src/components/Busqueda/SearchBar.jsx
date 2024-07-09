@@ -25,8 +25,7 @@ const SearchBar = ({ setIsScrolled }) => {
         />
       </div>
       <div className="med-list">
-        {query && <MedicationsList query={query} />}
-        {/* solo renderiza si la query no esta vacia */}
+        {query && <MedicationsList query={query} />}{" "}
       </div>
     </section>
   );
