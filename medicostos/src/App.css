@@ -1,3 +1,5 @@
+/* ESTE EL EL ORIGINAL */
+
 * {
   padding: 0;
   margin: 0;
@@ -104,7 +106,6 @@ body {
 
 .pagination button:hover {
   background-color: #0056b3;
-<<<<<<< HEAD
   .logo {
     height: 6em;
     padding: 1.5em;
@@ -140,42 +141,47 @@ body {
   .read-the-docs {
     color: #888;
   }
-=======
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.app-container {
+  display: flex;
+  transition: transform 0.3s ease;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* AQUI TERMINA EL ORIGINAL */
+
+.app-container {
+  display: flex;
+  transition: transform 0.3s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.app-container.selected .medications-list {
+  transform: translateX(-50%);
+  width: 50%;
 }
 
-.card {
-  padding: 2em;
+.app-container.selected .medications-info {
+  width: 50%;
 }
 
-.read-the-docs {
-  color: #888;
->>>>>>> 8b16b0f34725b993c22a3d17c05661ab0fc391c2
+.medications-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  transition: transform 0.3s ease;
+  margin-top: -1rem; /* esto esta re trucho cambialo despues */
+  border: 2px solid blue;
+}
+
+.medications-info {
+  display: none;
+  transition: width 0.3s ease;
+}
+
+.app-container.selected .medications-info {
+  display: block;
+
+  width: 40%;
+  transition: width 0.3s ease;
 }

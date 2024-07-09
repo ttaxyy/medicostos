@@ -3,6 +3,7 @@ import { useSearchMedications } from "../hooks/useSearchMedications";
 import MedicationCard from "./Card/MedicationCard";
 import LoadingSpinner from "./configs/LoadingSpinner";
 import InfoCard from "./Card/InfoCard";
+import "../../src/App.css"; // Asegúrate de que esta ruta sea correcta
 
 const MedicationsList = ({ query }) => {
   const { data, error, isLoading } = useSearchMedications(query);
@@ -25,8 +26,10 @@ const MedicationsList = ({ query }) => {
   };
 
   return (
-    <>
-      <div className="medications-list">
+    <div className={`app-container ${selectedMedication ? "selected" : ""}`}>
+      <div
+        className={`medications-list ${selectedMedication ? "selected" : ""}`}
+      >
         {medications.map((medication, index) => (
           <MedicationCard
             key={medication.id}
@@ -36,15 +39,15 @@ const MedicationsList = ({ query }) => {
           />
         ))}
       </div>
-      <div className="medications-info">
-        {selectedMedication && (
+      {selectedMedication && (
+        <div className="medications-info">
           <InfoCard
             key={selectedMedication.id}
             medication={selectedMedication} // Muestra la tarjeta de información solo si hay una tarjeta seleccionada
           />
-        )}
-      </div>
-    </>
+        </div>
+      )}
+    </div>
   );
 };
 
