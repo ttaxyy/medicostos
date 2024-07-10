@@ -30,9 +30,9 @@
   min-width: 100vh;
   height: 0vh;
   padding-top: 0vh;
-  transition: 0.4s ease;
 }
 
 .search-results-container.active .med-list {
   padding-top: 15vh;
+  height: 100vh;
 }

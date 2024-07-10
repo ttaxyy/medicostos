@@ -12,19 +12,21 @@
 .card {
   display: flex;
   align-items: center;
+  height: 10rem;
   background-color: #ffffff; /* Color de fondo */
   border-radius: 10px;
   box-shadow: 0px 10px 8px rgba(134, 64, 64, 0.1);
-  margin: 20px;
-  padding: 40px;
-  width: 80%; /* Ajusta el ancho */
-  transition: transform 0.3s ease, box-shadow 0.8s ease, border-color 0.3s ease; /* Añadir transición suave */
+  margin: 0.5rem;
+  padding: 2rem;
+  width: 90%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; /* Añadir transición suave */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   animation: show 0.5s;
 }
 
 .imgcard {
+  background-color: #ffffff;
   max-width: 80px;
   height: auto;
   margin-right: 20px;
