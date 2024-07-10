@@ -56,4 +56,5 @@
   padding: 1rem;
   background-color: #747474;
   border-radius: 10px;
+  animation: show 0.5s;
 }
