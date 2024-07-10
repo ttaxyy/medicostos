@@ -25,15 +25,15 @@ body {
   background-color: white;
 }
 
+.MedInfoStatico {
+  width: 30vh;
+  height: 30vh;
+}
+
 .btn-empty {
   border: none;
   background-color: inherit;
   cursor: pointer;
-}
-
-/* App.css */
-.app-container {
-  padding: 0px;
 }
 
 .search-container {
@@ -49,6 +49,11 @@ body {
   padding: 5px 10px;
 }
 
+.app-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 .app {
   display: flex;
   flex-direction: column;
@@ -110,6 +115,7 @@ body {
 
 /* AQUI TERMINA EL ORIGINAL */
 
+
 .app-container {
   display: flex;
   transition: transform 0.3s ease;
@@ -136,23 +142,28 @@ body {
   display: none;
   transition: width 3.2s ease;
   height: 100%;
-  animation: show 1s ease-in-out;
+}
+
+.search-results-container.active .medications-info {
+  display: flex;
 }
 
 .app-container.selected .medications-info {
-  z-index: 1;
-  display: block;
-  height: 80vh;
-  width: 50%;
-  transition: width 3.2s ease;
+  width: 50vw;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+  margin-top: 15vh;
+}
+
+.app-container.selected .medications-list {
+  display: flex;
+  width: 100%;
+  position: relative;
 }
 
 @media (max-width: 1050px) {
   .app-container.selected .medications-list {
-    width: 100vw;
-  }
-
-  .app-container.selected .medications-info {
     width: 100vw;
   }
 
