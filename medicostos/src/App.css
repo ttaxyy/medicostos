@@ -31,66 +31,6 @@ body {
   cursor: pointer;
 }
 
-@media screen and (max-height: 1000px) {
-  #lema > b {
-    font-size: 30px;
-  }
-  #lema .span {
-    font-size: 20px;
-  }
-}
-
-@media screen and (max-height: 400px) {
-  #lema {
-    gap: 0.5rem;
-    padding: 1vh !important;
-  }
-}
-
-@media screen and (max-height: 750px) {
-  #lema > b {
-    font-size: 25px;
-  }
-  #lema .span {
-    font-size: 15px;
-  }
-}
-
-@media screen and (max-width: 815px) {
-  .display-pc {
-    display: none;
-  }
-
-  .display-mobile {
-    display: block;
-  }
-
-  header a {
-    padding: 0 15px;
-  }
-  #portada {
-    flex-direction: column;
-    background-color: var(--verde-oscuro);
-  }
-
-  #imagenPortada {
-    display: flex;
-    width: 100vw;
-    height: 40vh;
-  }
-
-  #lema {
-    font-size: 36px;
-    text-align: center;
-    width: 100vw;
-    justify-content: start;
-    padding-top: 3rem;
-  }
-
-  #lema > span {
-    font-size: 24px;
-  }
-}
 /* App.css */
 .app-container {
   padding: 0px;
@@ -156,21 +96,6 @@ body {
     filter: drop-shadow(0 0 2em #61dafbaa);
   }
 
-  @keyframes logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-
-  @media (prefers-reduced-motion: no-preference) {
-    a:nth-of-type(2) .logo {
-      animation: logo-spin infinite 20s linear;
-    }
-  }
-
   .card {
     padding: 2em;
   }
@@ -219,9 +144,13 @@ body {
   transition: width 3.2s ease; /* Aumentado el tiempo de transición */
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1050px) {
   .app-container.selected .medications-list {
-    width: 100vh;
+    width: 100vw;
+  }
+
+  .app-container.selected .medications-info {
+    width: 100vw;
   }
 
   .app-container {
@@ -235,5 +164,82 @@ body {
   .app-container {
     display: flex;
     align-items: start;
+  }
+  .mensajito > h2 {
+    font-size: 1.5rem !important;
+  }
+}
+
+@media screen and (max-height: 1000px) {
+  #lema > b {
+    font-size: 30px;
+  }
+  #lema .span {
+    font-size: 20px;
+  }
+  .todo {
+    height: auto;
+  }
+  .mensajito > p {
+    font-size: 1.2rem;
+  }
+
+  .contenidoFormulario {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-height: 400px) {
+  #lema {
+    gap: 0.5rem;
+    padding: 1vh !important;
+  }
+}
+
+@media screen and (max-height: 750px) {
+  #lema > b {
+    font-size: 25px;
+  }
+  #lema .span {
+    font-size: 15px;
+  }
+  .contenido {
+    height: auto !important;
+  }
+}
+
+@media screen and (max-width: 815px) {
+  .display-pc {
+    display: none;
+  }
+
+  .display-mobile {
+    display: block;
+  }
+
+  header a {
+    padding: 0 15px;
+  }
+  #portada {
+    flex-direction: column;
+    background-color: var(--verde-oscuro);
+  }
+
+  #imagenPortada {
+    display: flex;
+    width: 100vw;
+    height: 40vh;
+  }
+
+  #lema {
+    font-size: 36px;
+    text-align: center;
+    width: 100vw;
+    justify-content: start;
+    padding-top: 3rem;
+  }
+
+  #lema > span {
+    font-size: 24px;
   }
 }

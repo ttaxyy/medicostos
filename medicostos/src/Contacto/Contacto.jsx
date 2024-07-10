@@ -145,10 +145,11 @@ function Contacto() {
             para todos. ¡Únete a nosotros y se parte del cambio hacia un sistema
             de salud más inclusivo y eficiente!
           </p>{" "}
-          <p className="p">Autores del Proyecto: </p>
+          <p className="p">Autores del Proyecto: </p>{" "}
           <p className="p">
-            Fabián Torres - Gonzalo Pavez - Ignacio Morales - Jett Puga
-          </p>
+            {" "}
+            Fabián Torres - Gonzalo Pavez - Ignacio Morales - Jett Puga
+          </p>{" "}
         </div>
       </div>
     </div>
