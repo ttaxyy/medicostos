@@ -31,6 +31,13 @@
   height: 0;
   padding-top: 0;
 }
+.med-list.selected {
+  display: flex;
+  flex-direction: column;
+  min-width: 50vw;
+  height: 0;
+  padding-top: 0;
+}
 
 .search-results-container.active .med-list {
   padding-top: 15vh;
