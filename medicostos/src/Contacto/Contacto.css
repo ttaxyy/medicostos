@@ -5,6 +5,7 @@
   ); /* los 75px son por la altura que le puso jett al navbar */
   align-items: center;
   flex-direction: row;
+  background: linear-gradient(to right, white 50%, var(--verde-oscuro) 50%);
 }
 
 .contenido {
@@ -12,23 +13,24 @@
   height: calc(100vh - 75px);
   width: 50%;
   justify-content: center;
+  align-items: center;
 }
 
 .contenido2 {
   flex: 1;
   display: flex;
   height: calc(100vh - 75px);
-  background-color: var(
-    --verde-oscuro
-  ) !important; /*  gonzalo good carriando insano aqui*/
+  /*  background-color: red !important; */ /*  gonzalo good carriando insano aqui*/
   width: 50%;
+  background-color: var(--verde-oscuro);
 }
 .contenidoFormulario {
   display: flex;
   flex-direction: column;
-  margin-top: 20vh;
+  /* margin-top: 20vh; */
   width: 80%;
 }
+
 .titulo {
   margin-bottom: 1rem;
 }
@@ -39,7 +41,7 @@
   color: white;
   flex-direction: column;
   gap: 5vh;
-  margin-top: 0vh;
+  /* margin-top: 0vh; */
 }
 
 .mensajito > h2 {
@@ -49,9 +51,16 @@
 }
 .mensajito > p {
   display: flex;
-  margin: 0vh 5vh;
+
   gap: 2rem;
   flex-direction: column;
+  width: 100%;
+}
+.p {
+  border: 5%;
+  padding-left: 5%;
+  background-color: var(--verde-oscuro);
+  font-size: 1.25rem;
 }
 
 input {
@@ -62,7 +71,7 @@ input {
 .inputs p {
   display: flex;
   flex-direction: column;
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
 }
 #mensaje {
   height: 6rem;
@@ -108,9 +117,10 @@ textarea {
   background-color: #333;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1050px) {
   .todo {
     flex-direction: column;
+    background: linear-gradient(to bottom, white 50%, white 50%);
   }
   .contenido2 {
     height: 100vh;
@@ -143,6 +153,15 @@ textarea {
     padding: 0;
     margin: 0;
     gap: 0;
+  }
+
+  .mensajito {
+    height: 100%;
+    margin-top: 0;
+  }
+  #nombre,
+  #apellido {
+    width: 100%;
   }
 }
 

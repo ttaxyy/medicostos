@@ -25,14 +25,14 @@ function Contacto() {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault(); // Previene el comportamiento por defecto del formulario (recargar la página).
+    e.preventDefault(); // Previene el comportamiento por defecto del formulario, recargar la página.
 
     emailjs
       .send(
-        "service_sx1exjf", // Reemplaza con tu Service ID
-        "template_fil95n9", // Reemplaza con tu Template ID
+        "service_sx1exjf", // Service ID
+        "template_fil95n9", //  Template ID
         formData,
-        "98u0wS5siZu56Tylr" // Reemplaza con tu User ID
+        "98u0wS5siZu56Tylr" //  User ID
       )
       .then(
         (response) => {
@@ -118,8 +118,8 @@ function Contacto() {
       </div>
       <div className="contenido2">
         <div className="mensajito">
-          <h2>Sobre nosotros</h2>
-          <p>
+          <h2 id="h2">Sobre nosotros</h2>
+          <p className="p">
             Somos un equipo de desarrolladores que participó en el bootcamp de
             Generation Chile, donde trabajamos arduamente para completar este
             proyecto. Nos motiva profundamente el deseo de ayudar a la comunidad
@@ -127,25 +127,27 @@ function Contacto() {
             hemos creado una aplicación web diseñada para facilitar la
             comparación de precios de medicamentos entre diferentes farmacias de
             la comuna de Santiago, Chile.
-            <p>
-              Nuestra visión es proporcionar una plataforma que no solo
-              beneficie a los usuarios, permitiéndoles encontrar la mejor opción
-              para sus necesidades, sino también dar visibilidad a las farmacias
-              más pequeñas, que a menudo pasan desapercibidas. Creemos que todos
-              merecen acceso a medicamentos asequibles y de calidad, y nuestra
-              herramienta busca hacer precisamente eso.
-            </p>{" "}
-            <p>
-              Invitamos a todos los usuarios a sumarse a nuestra comunidad,
-              utilizando la aplicación para ahorrar en sus compras de
-              medicamentos y mejorar su bienestar. Asimismo, extendemos una
-              cálida invitación a las farmacias interesadas en unirse a nuestra
-              base de datos, para que juntos podamos ofrecer una alternativa más
-              justa y accesible para todos. ¡Únete a nosotros y se parte del
-              cambio hacia un sistema de salud más inclusivo y eficiente!
-            </p>{" "}
-            <p>Autores del Proyecto: </p>
-            <p>Fabián Torres - Gonzalo Pavez - Ignacio Morales - Jett Puga</p>
+          </p>
+          <p className="p">
+            Nuestra visión es proporcionar una plataforma que no solo beneficie
+            a los usuarios, permitiéndoles encontrar la mejor opción para sus
+            necesidades, sino también dar visibilidad a las farmacias más
+            pequeñas, que a menudo pasan desapercibidas. Creemos que todos
+            merecen acceso a medicamentos asequibles y de calidad, y nuestra
+            herramienta busca hacer precisamente eso.
+          </p>{" "}
+          <p className="p">
+            Invitamos a todos los usuarios a sumarse a nuestra comunidad,
+            utilizando la aplicación para ahorrar en sus compras de medicamentos
+            y mejorar su bienestar. Asimismo, extendemos una cálida invitación a
+            las farmacias interesadas en unirse a nuestra base de datos, para
+            que juntos podamos ofrecer una alternativa más justa y accesible
+            para todos. ¡Únete a nosotros y se parte del cambio hacia un sistema
+            de salud más inclusivo y eficiente!
+          </p>{" "}
+          <p className="p">Autores del Proyecto: </p>
+          <p className="p">
+            Fabián Torres - Gonzalo Pavez - Ignacio Morales - Jett Puga
           </p>
         </div>
       </div>

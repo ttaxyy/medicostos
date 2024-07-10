@@ -3,8 +3,10 @@ import { useSearchMedications } from "../hooks/useSearchMedications";
 import MedicationCard from "./Card/MedicationCard";
 import LoadingSpinner from "./configs/LoadingSpinner";
 import InfoCard from "./Card/InfoCard";
-import "../../src/App.css"; // Asegúrate de que esta ruta sea correcta
+import "../../src/App.css";
+import axios from "axios";
 
+const medicamento = axios.create({});
 const MedicationsList = ({ query }) => {
   const { data, error, isLoading } = useSearchMedications(query);
 
