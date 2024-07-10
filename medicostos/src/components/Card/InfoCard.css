@@ -25,10 +25,10 @@
   width: 80%;
   border-radius: 10px;
   cursor: pointer;
-  border: 4px solid rgb(80, 139, 151); /* esto es trucho, si le sabes cambialo */
+  border: 3px solid rgb(80, 139, 151, 0); /* esto es trucho, si le sabes cambialo */
 }
 .map:hover {
-  border-color: #44ccba !important;
+  border-color: #44ccba;
 }
 
 .a {
