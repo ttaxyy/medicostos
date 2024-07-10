@@ -22,7 +22,7 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; /* Añadir transición suave */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  animation: show 0.5s;
+  animation: show 1.5s;
 }
 
 .imgcard {
