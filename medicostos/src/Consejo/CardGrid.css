@@ -1,12 +1,12 @@
 .card-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 50px;
-  padding: 60px;
+  gap: 1vw;
+  padding: 3vw;
 }
 
 /* Media query para pantallas medianas */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .card-grid {
     grid-template-columns: repeat(1, 1fr);
   }
