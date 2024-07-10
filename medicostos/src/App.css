@@ -31,6 +31,31 @@ body {
   cursor: pointer;
 }
 
+@media screen and (max-height: 1000px) {
+  #lema > b {
+    font-size: 30px;
+  }
+  #lema .span {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-height: 400px) {
+  #lema {
+    gap: 0.5rem;
+    padding: 1vh !important;
+  }
+}
+
+@media screen and (max-height: 750px) {
+  #lema > b {
+    font-size: 25px;
+  }
+  #lema .span {
+    font-size: 15px;
+  }
+}
+
 @media screen and (max-width: 815px) {
   .display-pc {
     display: none;
@@ -45,15 +70,21 @@ body {
   }
   #portada {
     flex-direction: column;
+    background-color: var(--verde-oscuro);
   }
 
   #imagenPortada {
-    display: none;
+    display: flex;
+    width: 100vw;
+    height: 40vh;
   }
 
   #lema {
     font-size: 36px;
     text-align: center;
+    width: 100vw;
+    justify-content: start;
+    padding-top: 3rem;
   }
 
   #lema > span {
