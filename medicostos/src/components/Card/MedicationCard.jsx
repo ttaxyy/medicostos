@@ -9,7 +9,7 @@ const MedicationCard = ({ medication, index, onClick }) => {
   return (
     <div
       className="card"
-      style={{ border: `4px solid white` }}
+      style={{ border: `4px solid #ddd` }}
       onClick={onClick}
     >
       <img
