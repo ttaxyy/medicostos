@@ -10,8 +10,9 @@ const medicamento = axios.create({});
 const MedicationsList = ({ query }) => {
   const { data, error, isLoading } = useSearchMedications(query);
 
-  // Añadimos un estado para mantener la tarjeta seleccionada
   const [selectedMedication, setSelectedMedication] = useState(null);
+  const [currentPage, setCurrentPage] = useState(0);
+  const cardsPerPage = 4;
 
   useEffect(() => {
     console.log("Query changed:", query);
@@ -22,9 +23,24 @@ const MedicationsList = ({ query }) => {
 
   const medications = data || [];
 
-  // Función que se ejecuta al hacer clic en una tarjeta de medicación
+  const startIndex = currentPage * cardsPerPage;
+  const endIndex = startIndex + cardsPerPage;
+  const currentMedications = medications.slice(startIndex, endIndex);
+
   const handleCardClick = (medication) => {
-    setSelectedMedication(medication); // Actualiza el estado de la tarjeta seleccionada
+    setSelectedMedication(medication);
+  };
+
+  const handleNext = () => {
+    if (endIndex < medications.length) {
+      setCurrentPage((prevPage) => prevPage + 1);
+    }
+  };
+
+  const handlePrevious = () => {
+    if (startIndex > 0) {
+      setCurrentPage((prevPage) => prevPage - 1);
+    }
   };
 
   return (
@@ -32,20 +48,31 @@ const MedicationsList = ({ query }) => {
       <div
         className={`medications-list ${selectedMedication ? "selected" : ""}`}
       >
-        {medications.map((medication, index) => (
+        {currentMedications.map((medication, index) => (
           <MedicationCard
             key={medication.id}
             medication={medication}
             index={index}
-            onClick={() => handleCardClick(medication)} // Agregamos un controlador de clic a cada tarjeta
+            onClick={() => handleCardClick(medication)}
           />
         ))}
+        <div className="pagination-controls">
+          <button onClick={handlePrevious} disabled={startIndex === 0}>
+            Previous
+          </button>
+          <button
+            onClick={handleNext}
+            disabled={endIndex >= medications.length}
+          >
+            Next
+          </button>
+        </div>
       </div>
       {selectedMedication && (
         <div className="medications-info">
           <InfoCard
             key={selectedMedication.id}
-            medication={selectedMedication} // Muestra la tarjeta de información solo si hay una tarjeta seleccionada
+            medication={selectedMedication}
           />
         </div>
       )}
