@@ -117,7 +117,7 @@ body {
 
 .app-container.selected {
   display: flex;
-  background-color: #ccc;
+  /* background-color: #ccc; */ /*🤯 color de fondo al hacer clic*/
 }
 
 .app-container.selected .medications-list {
