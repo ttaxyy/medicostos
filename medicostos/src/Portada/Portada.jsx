@@ -26,10 +26,9 @@ function Portada() {
           <img id="imagenPortada" src={farmacia} alt="Farmacia" />
           <div id="lema">
             <b>Nuestra meta es informar a las personas: </b>
-            <br />
-            <span>
+            <span className="span">
               Para que tomen decisiones informadas sobre dónde comprar sus
-              medicamentos
+              medicamentos.
             </span>
           </div>
         </div>
