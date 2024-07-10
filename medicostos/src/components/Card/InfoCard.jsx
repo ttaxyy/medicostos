@@ -48,6 +48,7 @@ const InfoCard = ({ medication }) => {
         />
         <h5>{medication.nombre}</h5>
         <h1>Precio: ${medication.precio}</h1>
+        <p>{medication.farmaciaNombre}</p>
 
         <button className="botonMap" onClick={linkClick}>
           Ir a sitio web
