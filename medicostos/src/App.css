@@ -115,11 +115,35 @@ body {
 
 /* AQUI TERMINA EL ORIGINAL */
 
+
+.app-container {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.app-container.selected {
+  display: flex;
+  /* background-color: #ccc; */ /*🤯 color de fondo al hacer clic*/
+}
+
+.app-container.selected .medications-list {
+  width: 50%;
+}
+
+.app-container.selected .medications-info {
+  z-index: 1;
+  display: block;
+  height: 0vh;
+  width: 50%;
+  transition: width 0.3s ease;
+}
+
 .medications-info {
   display: none;
   transition: width 3.2s ease;
   height: 100%;
 }
+
 .search-results-container.active .medications-info {
   display: flex;
 }
@@ -131,6 +155,7 @@ body {
   height: 80%;
   margin-top: 15vh;
 }
+
 .app-container.selected .medications-list {
   display: flex;
   width: 100%;
