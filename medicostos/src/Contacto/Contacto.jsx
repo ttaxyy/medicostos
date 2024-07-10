@@ -50,7 +50,7 @@ function Contacto() {
       <div className="contenido">
         <div className="contenidoFormulario">
           <div className="titulo">
-            <h1>Contactanos</h1>
+            <h1>Contáctanos</h1>
             <p>Ingresa tu consulta</p>
           </div>
           <div className="form">
