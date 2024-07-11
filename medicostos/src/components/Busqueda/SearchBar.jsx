@@ -45,7 +45,9 @@ const SearchBar = ({ setIsScrolled }) => {
             />
           )}
         </div>
-        <MedicationInfo selectedMedication={selectedMedication} />
+        <div className="medications-info">
+          <MedicationInfo selectedMedication={selectedMedication} />
+        </div>
       </div>
     </section>
   );

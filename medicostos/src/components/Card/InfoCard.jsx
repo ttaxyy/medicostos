@@ -47,8 +47,8 @@ const InfoCard = ({ medication }) => {
           alt={medication.nombre}
         />
         <h5>{medication.nombre}</h5>
-        <h1>Precio: ${medication.precio}</h1>
         <p>{medication.farmaciaNombre}</p>
+        <h1>Precio: ${medication.precio}</h1>
 
         <button className="botonMap" onClick={linkClick}>
           Ir a sitio web
@@ -58,6 +58,7 @@ const InfoCard = ({ medication }) => {
           src={getFarmaciaImage(medication.farmaciaNombre)}
           onClick={mapClick} // Cambié mapClic a mapClick para consistencia
         />
+        <p>Ver Ubicación</p>
       </div>
     </div>
   );

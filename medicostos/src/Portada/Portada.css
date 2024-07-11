@@ -76,6 +76,5 @@ body {
   height: 80vh;
   min-height: 730px;
   width: 100vw;
-  border: 2px solid blue;
   transition: width 0.8s ease;
 }

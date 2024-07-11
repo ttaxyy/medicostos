@@ -26,30 +26,36 @@
   border-radius: 10px;
   cursor: pointer;
   border: 3px solid rgb(80, 139, 151, 0); /* esto es trucho, si le sabes cambialo */
+  transition: 0.3s;
 }
+
 .map:hover {
-  border-color: #44ccba;
+  border: 3px solid var(--naranja);
 }
 
 .a {
   z-index: 100;
   display: flex;
-  border: 2px solid red;
   justify-content: center;
+  flex-direction: column;
   height: 100%;
   align-items: center;
+  height: 100%;
 }
 
 .a h1 {
-  color: rgb(255, 255, 255);
-  font-size: x-large;
+  color: rgb(0, 0, 0);
+  font-size: 2rem;
+  border: solid 2px rgba(255, 255, 255, 0.616);
+  padding: 1px 2rem;
+  border-radius: 5px;
 }
 
 .a p {
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
 .a h5 {
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   font-size: large;
   text-align: center;
   font-weight: 500;
@@ -61,10 +67,13 @@
   justify-content: end;
   align-items: center;
   width: 400px;
-  gap: 1rem;
-  height: 90%;
+  gap: 0.5rem;
+  height: 100%;
   padding: 1rem;
-  background-color: #747474;
-  border-radius: 10px;
+  background-color: #ccc;
+  border: solid 5px;
+  border-color: #2b5b5fa2;
   animation: show 1s;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.1);
 }
