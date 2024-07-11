@@ -29,7 +29,7 @@ const InfoCard = ({ medication }) => {
         return ahumada;
       case "Farmacias Chile":
         return farmaciasChile;
-      case "Farmacia Dr.Simi":
+      case "Farmacias del Dr. Simi":
         return drSimi;
       case "Farmacia La Botika":
         return bokita;
