@@ -3,7 +3,7 @@
   width: 10rem;
   border-radius: 10px;
   border: none;
-  transition: transform 0.3s, background-color 0.3s;
+  transition: transform 0.5s, background-color 0.3s;
   background-color: rgb(65, 65, 65);
   color: rgb(255, 255, 255);
   cursor: pointer;
@@ -36,16 +36,18 @@
 .a {
   z-index: 100;
   display: flex;
+  border-color: black;
   justify-content: center;
   flex-direction: column;
   height: 100%;
   align-items: center;
-  height: 100%;
+  border-radius: 10px;
+  box-shadow: 12px 12px 12px 12px rgba(134, 64, 64, 0.1);
 }
 
 .a h1 {
   color: rgb(0, 0, 0);
-  font-size: 2rem;
+  font-size: x-large;
   border: solid 2px rgba(255, 255, 255, 0.616);
   padding: 1px 2rem;
   border-radius: 5px;
@@ -70,10 +72,10 @@
   gap: 0.5rem;
   height: 100%;
   padding: 1rem;
-  background-color: #ccc;
+  background-color: #ffffff;
+  border-radius: 10px;
   border: solid 5px;
   border-color: #2b5b5fa2;
   animation: show 1s;
-  border-radius: 10px;
   box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.1);
 }
