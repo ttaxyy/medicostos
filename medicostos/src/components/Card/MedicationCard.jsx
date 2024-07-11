@@ -3,21 +3,27 @@ import "../Card/Card.css";
 
 // Agregamos la propiedad onClick para manejar el evento de clic
 const MedicationCard = ({ medication, index, onClick }) => {
-  const backgroundColor = index % 2 === 0 ? "var(--aqua)" : "var(--naranja)";
+  // const backgroundColor = index % 2 === 0 ? "var(--aqua)" : "var(--naranja)";
+  const borderColor = index % 2 === 0 ? "var(--naranja)" : "var(--aqua)";
 
   return (
-    <div className="card" style={{ backgroundColor }} onClick={onClick}>
+    <div
+      className="card"
+      style={{ border: `4px solid #ddd` }}
+      onClick={onClick}
+    >
       <img
         src={medication.farmaciaUrlImg}
         alt={medication.nombre}
         className="imgcard"
       />
       <div className="card-content">
-        <div className="nomCom">
-          <h2 className="mNombre">{medication.nombre}</h2>
-          <p>{medication.complemento}</p>
+        <h2>{medication.nombre}</h2>
+        <h3>{medication.complemento}</h3>
+        <div className="terceraL">
+          <h3>{medication.farmaciaNombre}</h3>
+          <p className="precio">Precio: ${medication.precio}</p>
         </div>
-        <p className="precio">Precio: ${medication.precio}</p>
       </div>
     </div>
   );

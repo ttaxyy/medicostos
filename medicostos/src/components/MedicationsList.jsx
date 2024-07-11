@@ -2,19 +2,14 @@ import { useEffect, useState } from "react";
 import { useSearchMedications } from "../hooks/useSearchMedications";
 import MedicationCard from "./Card/MedicationCard";
 import LoadingSpinner from "./configs/LoadingSpinner";
-import InfoCard from "./Card/InfoCard";
 import "../../src/App.css";
-import axios from "axios";
 
-const medicamento = axios.create({});
-const MedicationsList = ({ query }) => {
-  const { data, error, isLoading } = useSearchMedications(query);
-
-  // Añadimos un estado para mantener la tarjeta seleccionada
-  const [selectedMedication, setSelectedMedication] = useState(null);
+const MedicationsList = ({ query, onMedicationSelect, onCardClick }) => {
+  const [currentPage, setCurrentPage] = useState(0);
+  const { data, error, isLoading } = useSearchMedications(query, currentPage);
 
   useEffect(() => {
-    console.log("Query changed:", query);
+    setCurrentPage(0); // Reinicia la página cuando cambia la consulta
   }, [query]);
 
   if (isLoading) return <LoadingSpinner />;
@@ -22,33 +17,39 @@ const MedicationsList = ({ query }) => {
 
   const medications = data || [];
 
-  // Función que se ejecuta al hacer clic en una tarjeta de medicación
   const handleCardClick = (medication) => {
-    setSelectedMedication(medication); // Actualiza el estado de la tarjeta seleccionada
+    onMedicationSelect(medication); // Pasamos la medicación seleccionada al componente padre
+    onCardClick(); // Cambiamos las clases
+  };
+
+  const handleNext = () => {
+    setCurrentPage((prevPage) => prevPage + 1);
+  };
+
+  const handlePrevious = () => {
+    if (currentPage > 0) {
+      setCurrentPage((prevPage) => prevPage - 1);
+    }
   };
 
   return (
-    <div className={`app-container ${selectedMedication ? "selected" : ""}`}>
-      <div
-        className={`medications-list ${selectedMedication ? "selected" : ""}`}
-      >
-        {medications.map((medication, index) => (
-          <MedicationCard
-            key={medication.id}
-            medication={medication}
-            index={index}
-            onClick={() => handleCardClick(medication)} // Agregamos un controlador de clic a cada tarjeta
-          />
-        ))}
+    <div className="medications-list">
+      {medications.map((medication, index) => (
+        <MedicationCard
+          key={medication.id}
+          medication={medication}
+          index={index}
+          onClick={() => handleCardClick(medication)}
+        />
+      ))}
+      <div className="pagination-controls">
+        <button onClick={handlePrevious} disabled={currentPage === 0}>
+          Previous
+        </button>
+        <button onClick={handleNext} disabled={medications.length < 4}>
+          Next
+        </button>
       </div>
-      {selectedMedication && (
-        <div className="medications-info">
-          <InfoCard
-            key={selectedMedication.id}
-            medication={selectedMedication} // Muestra la tarjeta de información solo si hay una tarjeta seleccionada
-          />
-        </div>
-      )}
     </div>
   );
 };
