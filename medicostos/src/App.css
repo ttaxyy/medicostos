@@ -141,6 +141,7 @@ body {
   display: none; /* Oculto por defecto */
   transition: width 0.3s ease;
   height: 100%;
+  padding-top: 0%;
 }
 
 .search-results-container.active .medications-info {
@@ -171,15 +172,28 @@ body {
 
   .app-container {
     display: flex;
-    align-items: center;
+    align-items: start;
     flex-direction: column;
+  }
+
+  .medications-info {
+    padding-left: 50%;
+  }
+}
+@media (max-height: 800px) {
+  .medications-info {
+    padding-top: 50%;
+  }
+}
+@media (max-height: 700px) {
+  .medications-info {
+    padding-top: 130%;
   }
 }
 
 @media (max-width: 700px) {
   .app-container {
     display: flex;
-    align-items: start;
   }
 
   .mensajito > h2 {
@@ -290,4 +304,11 @@ body {
 
 .pagination-controls button:hover {
   background-color: #32676e;
+}
+
+@media (max-width: 700px) {
+  .card-content h2 {
+    font-size: 0.7rem;
+    max-width: 6rem;
+  }
 }
