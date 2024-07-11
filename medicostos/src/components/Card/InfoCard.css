@@ -7,6 +7,7 @@
   background-color: rgb(65, 65, 65);
   color: rgb(255, 255, 255);
   cursor: pointer;
+  border: 2px;
 }
 
 .botonMap:hover {
@@ -24,6 +25,12 @@
   width: 80%;
   border-radius: 10px;
   cursor: pointer;
+  border: 3px solid rgb(80, 139, 151, 0); /* esto es trucho, si le sabes cambialo */
+  transition: 0.3s;
+}
+
+.map:hover {
+  border: 3px solid var(--naranja);
 }
 
 .a {
@@ -31,17 +38,26 @@
   display: flex;
   border-color: black;
   justify-content: center;
+  flex-direction: column;
   height: 100%;
   align-items: center;
   border-radius: 10px;
   box-shadow: 12px 12px 12px 12px rgba(134, 64, 64, 0.1);
+  height: 100%;
 }
 
 .a h1 {
   color: rgb(0, 0, 0);
   font-size: x-large;
+  font-size: 2rem;
+  border: solid 2px rgba(255, 255, 255, 0.616);
+  padding: 1px 2rem;
+  border-radius: 5px;
 }
 
+.a p {
+  color: rgb(0, 0, 0);
+}
 .a h5 {
   color: rgb(0, 0, 0);
   font-size: large;
@@ -55,10 +71,15 @@
   justify-content: end;
   align-items: center;
   width: 400px;
-  gap: 1rem;
-  height: 90%;
+  gap: 0.5rem;
+  height: 100%;
   padding: 1rem;
   background-color: #ffffff;
   border-radius: 10px;
+
+  border: solid 3px;
+  border-color: #2b5b5fa2;
   animation: show 1s;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.1);
 }

@@ -29,7 +29,7 @@ const InfoCard = ({ medication }) => {
         return ahumada;
       case "Farmacias Chile":
         return farmaciasChile;
-      case "Farmacia Dr.Simi":
+      case "Farmacias del Dr. Simi":
         return drSimi;
       case "Farmacia La Botika":
         return bokita;
@@ -47,6 +47,7 @@ const InfoCard = ({ medication }) => {
           alt={medication.nombre}
         />
         <h5>{medication.nombre}</h5>
+        <p>{medication.farmaciaNombre}</p>
         <h1>Precio: ${medication.precio}</h1>
 
         <button className="botonMap" onClick={linkClick}>
@@ -57,6 +58,7 @@ const InfoCard = ({ medication }) => {
           src={getFarmaciaImage(medication.farmaciaNombre)}
           onClick={mapClick} // Cambié mapClic a mapClick para consistencia
         />
+        <p>Ver Ubicación</p>
       </div>
     </div>
   );
