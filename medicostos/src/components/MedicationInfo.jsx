@@ -3,7 +3,7 @@ import InfoCard from "./Card/InfoCard";
 
 const MedicationInfo = ({ selectedMedication }) => {
   return (
-    <div className="medications-info">
+    <div>
       {selectedMedication ? (
         <InfoCard key={selectedMedication.id} medication={selectedMedication} />
       ) : (
