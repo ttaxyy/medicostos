@@ -7,6 +7,7 @@
   background-color: rgb(65, 65, 65);
   color: rgb(255, 255, 255);
   cursor: pointer;
+  border: 2px;
 }
 
 .botonMap:hover {
@@ -24,6 +25,10 @@
   width: 80%;
   border-radius: 10px;
   cursor: pointer;
+  border: 3px solid rgb(80, 139, 151, 0); /* esto es trucho, si le sabes cambialo */
+}
+.map:hover {
+  border-color: #44ccba;
 }
 
 .a {
@@ -40,6 +45,9 @@
   font-size: x-large;
 }
 
+.a p {
+  color: rgb(255, 255, 255);
+}
 .a h5 {
   color: rgb(255, 255, 255);
   font-size: large;
