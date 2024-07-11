@@ -257,6 +257,7 @@ body {
   #lema {
     font-size: 36px;
     text-align: center;
+    align-items: center;
     width: 100vw;
     justify-content: start;
     padding-top: 3rem;
