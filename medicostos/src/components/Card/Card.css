@@ -85,6 +85,8 @@
   font-size: 1.1em; /* Tamaño del texto */
   /*color: #ffffff; / Color del texto */
   border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
   padding: 2px;
 }
 
