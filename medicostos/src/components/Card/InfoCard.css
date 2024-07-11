@@ -48,7 +48,7 @@
 
 .a h1 {
   color: rgb(0, 0, 0);
-  font-size: x-large;
+  /*font-size: x-large;*/
   font-size: 2rem;
   border: solid 2px rgba(255, 255, 255, 0.616);
   padding: 1px 2rem;
@@ -76,10 +76,8 @@
   padding: 1rem;
   background-color: #ffffff;
   border-radius: 10px;
-
-  border: solid 3px;
+  border: solid 5px;
   border-color: #2b5b5fa2;
   animation: show 1s;
-  border-radius: 10px;
   box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.1);
 }
