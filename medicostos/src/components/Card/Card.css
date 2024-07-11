@@ -71,9 +71,8 @@
 
 .precio {
   align-self: flex-start;
-  font-size: 1.1em; /* Tamaño del texto */
-  color: #ffffff; /* Color del texto */
-  border: 2px solid black;
+  font-size: 1.1em;
+  padding: 2px;
 }
 
 .card:hover {
