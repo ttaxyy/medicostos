@@ -82,9 +82,7 @@
 
 .precio {
   align-self: flex-start;
-  font-size: 1.1em; /* Tamaño del texto */
-  /*color: #ffffff; / Color del texto */
-  border: 1px solid rgba(0, 0, 0, 0.4);
+  font-size: 1.1em;
   padding: 2px;
 }
 
