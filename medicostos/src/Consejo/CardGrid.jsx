@@ -107,10 +107,9 @@ const CardGrid = () => {
       <h2 className="subtitulo">Consejos a la hora de comprar medicamentos</h2>
       <ul className="texto">
         <li>Nunca te automediques.</li>
-        <li>Sigue las instrucciones de tu médico.</li>
         <li>
-          Es importante cotizar antes de comprar, ya que la diferencia entre
-          medicamentos bioequivalentes puede ser altísima.
+          Es importante cotizar antes de comprar, ya que la diferencia de precio 
+          de los medicamentos entre farmacias puede variar bastante.
         </li>
         <li>
           La Ley de Fármacos obliga a las farmacias a disponer de alternativas
@@ -121,17 +120,27 @@ const CardGrid = () => {
           rojo.
         </li>
         <li>
+          Asegúrate de revisar si tienes algún descuento por isapre, seguros 
+          complementarios, convenio Fonasa, cajas de compensación, etc.
+        </li>
+        <li>
           Para saber si tu seguro cubre un medicamento recetado, revisa los
           documentos del plan o llama al número que aparece en la tarjeta del
           seguro.
         </li>
         <li>
           Recuerda informar a tu médico sobre posibles alergias, enfermedades 
-          crónicas o hereditarias, y si consumes algún otro medicamento paralelamente.
+          crónicas o hereditarias, y si consumes algún otro medicamento.
         </li>
         <li>
           No dudes en preguntar sobre posibles efectos secundarios y si se debe evitar 
           consumir alimentos o bebidas durante el tratamiento.
+        </li>
+        <li>
+          Sigue siempre las instrucciones de tu médico y lee las indicaciones en el frasco y/o caja del medicamento.
+        </li>
+        <li>
+          Mantén tus remedios y vitaminas en envases cerrados herméticamente.
         </li>
       </ul>
       <h2 className="subtitulo">Descuentos</h2>
