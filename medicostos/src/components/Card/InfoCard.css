@@ -10,6 +10,19 @@
   border: 2px;
 }
 
+.cerrar {
+  height: 3rem;
+  width: 5rem;
+  border-radius: 10px;
+  border: none;
+  transition: transform 0.5s, background-color 0.3s;
+  background-color: rgb(65, 65, 65);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  border: 2px;
+  margin: 1rem;
+}
+
 .botonMap:hover {
   transform: scale(1.05);
   background-color: rgb(80, 139, 151);
@@ -31,6 +44,13 @@
 
 .map:hover {
   border: 3px solid var(--naranja);
+}
+
+.infoCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .a {

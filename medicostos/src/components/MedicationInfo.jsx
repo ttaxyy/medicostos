@@ -1,13 +1,16 @@
 import React from "react";
 import InfoCard from "./Card/InfoCard";
 
-const MedicationInfo = ({ selectedMedication }) => {
+const MedicationInfo = ({ selectedMedication, cerrarInfoCard }) => {
   return (
     <div>
       {selectedMedication ? (
-        <InfoCard key={selectedMedication.id} medication={selectedMedication} />
+        <InfoCard
+          medication={selectedMedication}
+          cerrarInfoCard={cerrarInfoCard}
+        />
       ) : (
-        <div></div>
+        <p>Selecciona un medicamento para ver los detalles</p>
       )}
     </div>
   );

@@ -44,10 +44,10 @@ const MedicationsList = ({ query, onMedicationSelect, onCardClick }) => {
       ))}
       <div className="pagination-controls">
         <button onClick={handlePrevious} disabled={currentPage === 0}>
-          Previous
+          Anterior
         </button>
         <button onClick={handleNext} disabled={medications.length < 4}>
-          Next
+          Siguiente
         </button>
       </div>
     </div>
