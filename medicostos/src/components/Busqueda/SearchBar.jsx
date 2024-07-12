@@ -25,6 +25,11 @@ const SearchBar = ({ setIsScrolled }) => {
     setIsSelected(true);
   };
 
+  const cerrarInfoCard = () => {
+    setIsSelected(false);
+    setSelectedMedication(null); // Opcional: Desselecciona el medicamento actual
+  };
+
   return (
     <section>
       <div className="busqueda">
@@ -45,8 +50,13 @@ const SearchBar = ({ setIsScrolled }) => {
             />
           )}
         </div>
-        <div className="medications-info">
-          <MedicationInfo selectedMedication={selectedMedication} />
+        <div className={`medications-info ${!isSelected ? "hidden" : ""}`}>
+          {selectedMedication && (
+            <MedicationInfo
+              selectedMedication={selectedMedication}
+              cerrarInfoCard={cerrarInfoCard}
+            />
+          )}
         </div>
       </div>
     </section>

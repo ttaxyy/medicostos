@@ -7,7 +7,7 @@ import farmaciasChile from "../../assets/farmaciasChile.png";
 import drSimi from "../../assets/farmaciasDrSimi.png";
 import bokita from "../../assets/farmaciasLaBokita.png";
 
-const InfoCard = ({ medication }) => {
+const InfoCard = ({ medication, cerrarInfoCard }) => {
   // Función para manejar el clic en el botón, abriendo el enlace en una nueva pestaña
   const linkClick = () => {
     window.open(medication.urlMedicamento, "_blank"); // Abre la URL en una nueva pestaña
@@ -58,9 +58,11 @@ const InfoCard = ({ medication }) => {
         <img
           className="map"
           src={getFarmaciaImage(medication.farmaciaNombre)}
-          onClick={mapClick} // Cambié mapClic a mapClick para consistencia
+          onClick={mapClick}
         />
-        <p>Ver Ubicación</p>
+        <button onClick={cerrarInfoCard} className="cerrar">
+          Cerrar
+        </button>
       </div>
     </div>
   );

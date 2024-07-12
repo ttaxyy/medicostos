@@ -22,7 +22,9 @@ const MedicationCard = ({ medication, index, onClick }) => {
         <h3>{medication.complemento}</h3>
         <div className="terceraL">
           <h3>{medication.farmaciaNombre}</h3>
-          <p className="precio">Precio: ${medication.precio}</p>
+          <p className="precio">
+            <span className="text-precio">Precio: </span>${medication.precio}
+          </p>
         </div>
       </div>
     </div>
