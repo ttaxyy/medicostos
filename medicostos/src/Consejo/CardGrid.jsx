@@ -67,7 +67,7 @@ const CardGrid = () => {
     <>
       <h2 className="subtitulo">Glosario</h2>
       <dl className="texto">
-        <dt>Medicamento Bioequivalente o Bioequivalente de Marca</dt>
+        <dt>Bioequivalente o Bioequivalente de Marca</dt>
         <dd>
           Un medicamento bioequivalente tiene el mismo principio activo que el
           medicamento original. Son respaldados por estudios científicos
@@ -75,16 +75,15 @@ const CardGrid = () => {
           garantizan que el efecto es el mismo en el paciente.
           {/* <br /><a href="https://www.sernac.cl/portal/604/w3-article-64747.html">Fuente.</a> */}
         </dd>
-        <dt>Medicamento Genérico o Bioequivalente Genérico</dt>
+        <dt>Genérico o Bioequivalente Genérico</dt>
         <dd>
           Tiene el mismo principo activo, y es una copia del original luego de
           que caduca la patente. No todos los medicamentos genéricos tienen el
           sello de bioequivalencia. Ejemplo: Paracetamol.
         </dd>
-        <dt>Medicamento de Marca, original o referente</dt>
+        <dt>Original, de marca o referente</dt>
         <dd>
-          Es el remedio original, y su precio refleja los costos de
-          investigación y estudios.
+          Es el remedio original, y su precio refleja los costos de investigación y estudios.
         </dd>
         <dt>
           Uso Racional de Medicamentos (<abbr>URM</abbr>)
@@ -93,12 +92,10 @@ const CardGrid = () => {
           Significa que "los pacientes reciben fármacos apropiados para sus
           necesidades clínicas, a dosis ajustadas a su situación particular,
           durante un periodo adecuado de tiempo y al mínimo costo posible para
-          ellos y para la comunidad", según la{" "}
+          ellos y para la comunidad", según la 
           <abbr title="Organización Mundial de la Salud">
-            <a
-              href="https://apps.who.int/gb/ebwha/pdf_files/EB118/B118_6-sp.pdf"
-              target="_blank"
-            >
+            <a href="https://apps.who.int/gb/ebwha/pdf_files/EB118/B118_6-sp.pdf"
+              target="_blank">
               OMS
             </a>
           </abbr>
@@ -127,6 +124,14 @@ const CardGrid = () => {
           Para saber si tu seguro cubre un medicamento recetado, revisa los
           documentos del plan o llama al número que aparece en la tarjeta del
           seguro.
+        </li>
+        <li>
+          Recuerda informar a tu médico sobre posibles alergias, enfermedades 
+          crónicas o hereditarias, y si consumes algún otro medicamento paralelamente.
+        </li>
+        <li>
+          No dudes en preguntar sobre posibles efectos secundarios y si se debe evitar 
+          consumir alimentos o bebidas durante el tratamiento.
         </li>
       </ul>
       <h2 className="subtitulo">Descuentos</h2>

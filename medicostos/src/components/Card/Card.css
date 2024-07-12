@@ -113,4 +113,8 @@
   .card-content p {
     font-size: 1em;
   }
+
+  .card-content h3 {
+    display: none;
+  }
 }
